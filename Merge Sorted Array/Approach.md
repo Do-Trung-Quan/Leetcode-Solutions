@@ -1,9 +1,11 @@
-1. Hướng tiếp cận (Approach)
-sử dụng kỹ thuật Hai con trỏ (Two Pointers) duyệt ngược từ cuối mảng
+**1. Hướng tiếp cận (Approach)**
+
+**sử dụng kỹ thuật Hai con trỏ (Two Pointers) duyệt ngược từ cuối mảng**
+
 Thay vì trộn từ đầu mảng (sẽ gây rủi ro ghi đè mất dữ liệu của nums1 và tốn thêm bộ nhớ đệm), em tận dụng khoảng trống có sẵn ở cuối nums1. Việc so sánh và điền các số lớn nhất từ cuối lên đầu giúp giải quyết bài toán In-place (ngay trên mảng gốc) một cách an toàn.
 
-2. Giải thích Logic (Logic Execution)
-Em sẽ khởi tạo 3 con trỏ:
+**2. Giải thích Logic (Logic Execution)**
+khởi tạo 3 con trỏ:
 
   + p1 = m - 1: Trỏ vào phần tử hợp lệ lớn nhất (cuối cùng) của nums1.
 
@@ -19,7 +21,7 @@ Tiến hành dùng vòng lặp for chạy i lùi dần về 0:
 
   + Trường hợp còn lại: Nếu nums1[p1] lớn hơn hoặc bằng, em điền nums1[p1] vào nums1[i] và lùi con trỏ p1.
 
-3. Độ phức tạp thuật toán (Complexity Analysis)
+**3. Độ phức tạp thuật toán (Complexity Analysis)**
   + Độ phức tạp thời gian (Time Complexity): O(m + n). Em duyệt qua các phần tử của cả hai mảng tối đa đúng một lần. Vòng lặp chạy nhiều nhất là m + n bước.
 
   + Độ phức tạp không gian (Space Complexity): O(1). Em thao tác trực tiếp trên mảng nums1 đầu vào, chỉ sử dụng thêm 3 biến con trỏ kiểu số nguyên nên không tiêu tốn thêm bộ nhớ phụ trợ.
